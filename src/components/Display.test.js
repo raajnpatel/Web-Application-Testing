@@ -8,8 +8,8 @@ describe("<Display />", () => {
         render(<Display />);
     });
     it("props work", () => {
-        const display = render(<Display strike={1} balls={2} />);
-        display.getByText(/Ball score: 2/);
-        display.getByText(/Strike score: 1/);
+        const display = render(<Display strike={1} ball={2} />);
+        display.getByText(/ball score: 2/);
+        display.getByText(/strike score: 1/);
     });
 });
