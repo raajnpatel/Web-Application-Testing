@@ -1,23 +1,12 @@
-import React, { useState } from "react";
-import Display from "./Display";
+import React from "react";
 
-const Dashboard = () => {
-    const [strike, setStrike] = useState(0);
-    const [balls, setBalls] = useState(0);
-
-    function strikeScore() {
-        return setStrike(strike + 1);
-    }
-    function ballScore() {
-        return setBalls(balls + 1);
-    }
+const Dashboard = props => {
+    const { BallsUp, StrikeUp } = props.play;
 
     return (
         <div>
-            Add some buttons
-            <Display />
-            <button onClick={strikeScore}>STRIKE</button>
-            <button onClick={ballScore}>BALL</button>
+            <button onClick={StrikeUp}>STRIKE</button>
+            <button onClick={BallsUp}>BALL</button>
         </div>
     );
 };
