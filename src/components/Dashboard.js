@@ -1,7 +1,7 @@
 import React from "react";
 
 const Dashboard = props => {
-    const { BallsUp, StrikeUp, Hit, Foul } = props.play;
+    const { BallsUp, StrikeUp, Hit, Foul } = props;
 
     return (
         <div>
